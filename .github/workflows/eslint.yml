@@ -9,7 +9,8 @@ on:
       - master
 
 jobs:
-  eslint:
+  eslintaction:
+    name: GitHub Action for ESLint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

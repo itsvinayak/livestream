@@ -9,16 +9,12 @@ on:
       - master
 
 jobs:
-  formatting:
+  blackcheck:
+    name: GitHub Action for Black
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Setup black environment
-        run: conda create --quiet --name black black
-
-      - name: Check formatting
-        run: |
-          export PATH="/usr/share/miniconda/bin:$PATH"
-          source activate black
-          black --check stools
+      - uses: jpetrucciani/black-check@master
+      - name: GitHub Action for Black
+        uses: jpetrucciani/black-check@master
+        with:
+          path: "."
