@@ -13,7 +13,7 @@ jobs:
     name: GitHub Action for Flake8
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: GitHub Action for Flake8
         uses: cclauss/GitHub-Action-for-Flake8@master
         with:

@@ -13,7 +13,7 @@ jobs:
     name: GitHub Action for Black
     runs-on: ubuntu-latest
     steps:
-      - uses: jpetrucciani/black-check@master
+      - uses: actions/checkout@v2
       - name: GitHub Action for Black
         uses: jpetrucciani/black-check@master
         with:
