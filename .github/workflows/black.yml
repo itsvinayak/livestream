@@ -13,8 +13,9 @@ jobs:
     name: GitHub Action for Black
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
       - name: GitHub Action for Black
-        uses: jpetrucciani/black-check@master
+        uses: ricardochaves/python-lint@v1.1.0
         with:
-          path: "."
+          use-black: true
+          extra-black-options: ""
